@@ -1,0 +1,17 @@
+{
+  "name": "portfolio3",
+  "version": "3.0.0",
+  "description": "Personal Portfolio v3",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "xedriq",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2"
+  }
+}
