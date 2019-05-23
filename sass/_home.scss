@@ -1,0 +1,33 @@
+.home {
+    // background-color: cadetblue;
+    grid-column: 2 / 8;
+    color: $color-primary-light;
+    
+    align-self: center;
+    justify-self: center;
+    line-height: 5rem;
+    
+    &__heading-1 {
+        // display: none;
+        
+    }
+    
+    &__heading-2 {
+        display: none;
+    }
+
+    &__subheading {
+       display: block;
+       font-weight: 300;
+       text-transform: uppercase;
+       text-align: center;    
+    }
+    
+    &__heading {
+       display: block; 
+       text-transform: uppercase;
+       letter-spacing: 1.5rem;
+       font-size: 3rem;
+       text-align: center;    
+    }
+}

@@ -4,6 +4,7 @@ $color-primary-orange: #D65A31;
 $color-primary-dark: #222831;
 $color-primary-light: #eee;
 $color-primary-medium: #707070;
+$color-primary-semi-dark: #393E46;
 
 *,
 *::after,
@@ -23,4 +24,17 @@ body {
     font-weight: 400;
     color: $color-primary-light;
     background-color: $color-primary-dark;
+}
+
+.container {
+    display: grid;
+
+    grid-template-rows: 70px min-content;
+}
+
+.main {
+    display: grid;
+
+    grid-template-rows: 100vh repeat(4, 100vh) min-content;
+    grid-template-columns: 1fr repeat(6, minmax(min-content, 20rem)) 1fr;
 }
