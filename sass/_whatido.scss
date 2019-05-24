@@ -1,5 +1,66 @@
 .whatido {
-    background-color: burlywood;
-    grid-column: 2 / 8;
+  // background-color: burlywood;
+  grid-column: 2 / 8;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+  text-align: center;
 
+  &__section {
+    padding: 1rem;
+  }
+
+  &__icon {
+      height: 13rem;
+    & svg {
+      width: 8rem;
+      fill: $color-primary-orange;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    z-index: -2;
+    opacity: 0.1;
+    left: 41.3%;
+    top: 2%;
+  }
+
+  &__content {
+    margin-top: 2rem;
+  }
+
+  &__subsubhead {
+    margin-top: 2rem;
+    display: block;
+    color: $color-primary-orange;
+  }
+
+  &__items {
+    margin-top: 2rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    list-style: none;
+  }
+
+  &__cert-link {
+    text-decoration: none;
+    color: $color-primary-orange;
+  }
+
+  &__cta {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link {
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 100%;
+  }
 }

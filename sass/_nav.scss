@@ -4,17 +4,12 @@
   height: 75px;
   padding: 0 5%;
   position: fixed;
+  z-index: 100;
 
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: space-between;
-
-  & a:link,
-  & a:visited {
-    text-decoration: none;
-    color: $color-primary-light;
-  }
-
+ 
   &__logo {
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -24,6 +19,12 @@
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary-light;
+    }
 
     &::after {
       content: "";
@@ -42,6 +43,10 @@
     &--active::after {
       transform: translateX(-14rem);
     }
+    
+    &:active::after {
+      background-color: lighten($color-primary-orange, 10);
+    }
   }
 
   &__photo {
@@ -52,47 +57,24 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(5, max-content);
-    grid-column-gap: 3rem;
+    grid-column-gap: 4rem;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     position: relative;
   }
 
   &__item {
     list-style: none;
-
-    & a {
-      padding: 0.5rem 1rem;
-    }
     position: relative;
   }
 
   &__link {
-    width: 80%;
+    width: 100%;
+    padding: 0.5rem .3rem;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -.7rem;
-      left: .8rem;
-      height: 3px;
-      width: inherit;
-      border-radius: 15%;
-      background-color: $color-primary-orange;
-      transform: scaleX(0);
-      transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    &:hover::after,
     &--active::after {
-        transform: scaleX(1);
+      transform: scaleX(1);
     }
-
-    &:active::after {
-        background-color: lighten($color-primary-orange, 10);
-    }
-
-
   }
 }

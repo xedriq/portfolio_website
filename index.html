@@ -17,50 +17,145 @@
         </a>
         <ul class="navigation__items">
             <li class="navigation__item">
-                <a class="navigation__link navigation__link--active" href="#">home</a>
+                <a class="btn-text navigation__link navigation__link--active" href="#">home</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">about</a>
+                <a class="btn-text navigation__link" href="#">about</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">what i do</a>
+                <a class="btn-text navigation__link" href="#">what i do</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">works</a>
+                <a class="btn-text navigation__link" href="#">works</a>
             </li>
             <li class="navigation__item">
-                <a class="navigation__link" href="#">contact</a>
+                <a class="btn-text navigation__link" href="#">contact</a>
             </li>
         </ul>
     </nav>
 
     <div class="main">
         <header class="home">
-            <h1 class="home__heading-1">
-                <span class="home__subheading">
-                        Hey there, I'm
+            <h1 class="heading-1">
+                <span class="subheading">
+                    Hey there, I'm
                 </span>
-                <span class="home__heading">
-                        Cedrick Tabares
+                <span class="heading">
+                    Cedrick Tabares
                 </span>
             </h1>
-            <h1 class="home__heading-2">
-                <span class="home__subheading">
+            <h1 class="heading-2">
+                <span class="subheading">
                     I'm from Philippines
                 </span>
-                <span class="home__heading">
+                <span class="heading">
                     A Full stack web developer
                 </span>
             </h1>
+            <div class="scroll">
+                <svg class="scroll__icon">
+                    <use xlink:href="/img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+            </div>
+            
              
         </header>
         
         <section class="about">
-            About me
+            <h2 class="about__heading">About me</h2>
+            <p class="about__content">
+                A passionate web developer living in Quezon City, Philippines. With my Bachelor of Science in Computer 
+                Science and my recent training in full-stack web development, together with the creative, organizational 
+                and technical skills that I acquired as Videographer / Video Editor for more than 10 years, here and 
+                abroad, I aim to develop functional, dynamic and effective web applications that delivers clear message 
+                to the user while contributing to the interest of the website owner, may it be working together with a 
+                team or with minimal supervision.
+            </p>
+            <div class="about__cta">
+                <a href="#" class="about__link btn-text">Download my CV</a>
+            </div>
         </section>
         
         <section class="whatido">
-            What I do
+            <h2 class="whatido__heading">What I do</h2>
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#icon-code"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Mid to Advanced Level in<br>Front-End Development</h3>
+                <p class="whatido__content">
+                    I recently attended and completed 2
+                    short courses from UP Diliman SITF
+                    about HTML, CSS, Jquery, Python and Django
+                    <span class="whatido__subsubhead">
+                        Some tools I'm comfortable
+                        working with on the front-end:
+                    </span>
+                </p>
+
+                <ul class="whatido__items">
+                    <li class="whatido__item">HTML5</li>
+                    <li class="whatido__item">CSS</li>
+                    <li class="whatido__item">SASS</li>
+                    <li class="whatido__item">JQuery</li>
+                    <li class="whatido__item">Bootstrap</li>
+                    <li class="whatido__item">SemanticUI</li>
+                </ul>
+            </div>
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#icon-terminal"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Certified Associate in<br>Python Programming</h3>
+                <p class="whatido__content">
+                    I recently acquire my certification
+                    and looking forward to use the
+                    knowledge and to learn more. 
+                    You can verify my certificate <a href="https://verify.openedg.org/?id=e7nY.nLPh.xrPk" class="whatido__cert-link">here.</a>
+                    <span class="whatido__subsubhead">
+                        Some tools I'm comfortable
+                        working with Python:
+                    </span>
+                </p>
+                <ul class="whatido__items">
+                    <li class="whatido__item">Numpy</li>
+                    <li class="whatido__item">Pandas</li>
+                </ul>
+            </div>
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="/img/sprite.svg#icon-database"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Focus on Back-End<br>Development</h3>
+                <p class="whatido__content">
+                    I prefer to mainly focus on the back-end side
+                    of the development. I believe in mastering
+                    a skill / discipline than knowing all at the basic level.
+                    <span class="whatido__subsubhead">
+                        Some tools I'm comfortable
+                        working with on the back-end:
+                    </span>
+                </p>
+                <ul class="whatido__items">
+                    <li class="whatido__item">Django</li>
+                    <li class="whatido__item">Flask</li>
+                    <li class="whatido__item">ORM & ODM</li>
+                    <li class="whatido__item">MySQL</li>
+                    <li class="whatido__item">PostgreSQL</li>
+                    <li class="whatido__item">MongoDB</li>
+                </ul>
+                
+            </div>
+            <div class="whatido__cta ">
+                <a href="#" class="whatido__link btn-text ">See some of my works</a>
+            </div>
+            
         </section>
         
         <section class="works">
