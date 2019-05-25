@@ -19,6 +19,7 @@
     transform: translate(-50%, -50%); }
   .about__link {
     font-size: 2rem;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%; }
 
@@ -69,6 +70,26 @@ body {
   grid-template-rows: 100vh repeat(4, 100vh) min-content;
   grid-template-columns: 1fr repeat(6, minmax(min-content, 22rem)) 1fr; }
 
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  border: 2px #D65A31 solid;
+  padding: .5rem 1.5rem;
+  color: #eee;
+  font-weight: 500;
+  transition: all .2s;
+  border-radius: 25px;
+  cursor: pointer; }
+
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: #D65A31; }
+
+.btn:active {
+  background-color: #de7c5c; }
+
 .btn-text:link, .btn-text:visited {
   text-decoration: none;
   color: #eee; }
@@ -106,8 +127,12 @@ body {
   line-height: 5rem;
   text-align: center; }
 
+.heading-1 {
+  background-color: burlywood; }
+
 .heading-2 {
-  display: none; }
+  background-color: cadetblue;
+  width: 60rem; }
 
 .subheading {
   display: block;
@@ -211,7 +236,7 @@ h3 {
   .whatido__icon {
     height: 13rem; }
     .whatido__icon svg {
-      width: 8rem;
+      width: 6rem;
       fill: #D65A31; }
   .whatido__heading {
     position: absolute;
@@ -240,8 +265,59 @@ h3 {
     transform: translate(-50%, -50%); }
   .whatido__link {
     font-size: 2rem;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%; }
 
 .works {
-  grid-column: 2 / 8; }
+  margin-top: 5rem;
+  grid-column: 2 / 8;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 40rem));
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5rem;
+  justify-self: center; }
+  .works__heading {
+    position: absolute;
+    top: 60%;
+    opacity: 0.1;
+    z-index: -10; }
+  .works__projects {
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #393E46; }
+    .works__projects:hover img {
+      transform: scale(1.1, 1.1);
+      opacity: 0.1;
+      filter: blur(3px); }
+    .works__projects:hover a,
+    .works__projects:hover .works__caption {
+      opacity: 1; }
+  .works__image {
+    width: 110%;
+    position: absolute;
+    left: -4%;
+    transition: all 0.5s;
+    object-fit: cover; }
+  .works__caption {
+    font-weight: 500;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s; }
+  .works__button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s;
+    opacity: 0; }

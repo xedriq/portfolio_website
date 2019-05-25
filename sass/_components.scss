@@ -1,3 +1,32 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.5rem;
+      border: 2px $color-primary-orange solid;
+      padding: .5rem 1.5rem;
+      color: $color-primary-light;
+      font-weight: 500;
+      transition: all .2s;
+      //Modification for the <button> element
+      border-radius: 25px;
+      cursor: pointer;
+  }
+
+  &:hover {
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      background-color: $color-primary-orange;
+  }
+
+  &:active {
+      background-color: lighten($color-primary-orange, 10);
+  }
+}
+
+
 .btn-text {
   &:link,
   &:visited {
