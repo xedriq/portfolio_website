@@ -67,7 +67,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: 100vh repeat(4, 100vh) min-content;
+  grid-template-rows: 100vh repeat(3, 100vh) repeat(2, max-content);
   grid-template-columns: 1fr repeat(6, minmax(min-content, 22rem)) 1fr; }
 
 .btn, .btn:link, .btn:visited {
@@ -76,10 +76,10 @@ body {
   display: inline-block;
   font-size: 1.5rem;
   border: 2px #D65A31 solid;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: #eee;
   font-weight: 500;
-  transition: all .2s;
+  transition: all 0.2s;
   border-radius: 25px;
   cursor: pointer; }
 
@@ -118,10 +118,12 @@ body {
   grid-template-columns: repeat(2, minmax(min-content, 50rem));
   position: relative;
   grid-gap: 5rem;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .header {
   position: absolute;
+  top: -7%;
   opacity: 0.1;
   z-index: -10; }
 
@@ -163,11 +165,56 @@ textarea {
   background: none !important;
   height: 510px;
   width: 674px;
-  opacity: .7; }
+  opacity: .8; }
 
 .footer {
-  background-color: crimson;
-  grid-column: 2 / 8; }
+  background-color: #393E46;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 5rem 0; }
+  .footer > :not(:last-child) {
+    margin-bottom: 4rem; }
+
+.social-icon,
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #D65A31;
+  transition: all 0.2s; }
+
+.social__link:not(:last-child) {
+  margin-right: 5rem; }
+
+.social__link:hover .social-icon {
+  fill: #e79e86; }
+
+.social__link:active .social-icon {
+  fill: #D65A31; }
+
+.contact-icons {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  grid-gap: 5rem;
+  align-items: center; }
+
+.mobile,
+.email {
+  display: flex;
+  align-items: center; }
+
+.address {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  text-align: start; }
+
+.detail {
+  margin-left: 1rem; }
+
+.copyright {
+  font-size: 1rem; }
 
 .home {
   grid-column: 2 / 8;
@@ -209,9 +256,10 @@ textarea {
   background-color: #393E46;
   width: 100vw;
   height: 75px;
-  padding: 0 5%;
+  padding: 0 7%;
   position: fixed;
   z-index: 100;
+  box-shadow: 0 2px 1rem rgba(34, 40, 49, 0.7);
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: space-between; }
@@ -310,7 +358,7 @@ h3 {
     color: #D65A31; }
   .whatido__cta {
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%); }
   .whatido__link {
@@ -345,9 +393,9 @@ h3 {
     background-color: #393E46; }
     .works__projects:hover img {
       transform: scale(1.1, 1.1);
-      opacity: 0.1;
-      filter: blur(3px); }
-    .works__projects:hover a,
+      opacity: 0.2;
+      filter: blur(1px); }
+    .works__projects:hover .works__button,
     .works__projects:hover .works__caption {
       opacity: 1; }
   .works__image {
@@ -369,5 +417,6 @@ h3 {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.4s;
-    opacity: 0; }
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s; }

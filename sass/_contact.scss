@@ -7,10 +7,12 @@
   grid-gap: 5rem;
 
   justify-content: center;
+  position: relative;
 }
 
 .header {
   position: absolute;
+  top: -7%;
   opacity: 0.1;
   z-index: -10;
 }
@@ -64,5 +66,5 @@ textarea {
   background: none !important;
   height: 510px;
   width: 674px;
-  opacity: .7;
+  opacity: .8;
 }

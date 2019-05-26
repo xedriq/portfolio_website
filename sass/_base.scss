@@ -40,6 +40,6 @@ body {
 .main {
     display: grid;
 
-    grid-template-rows: 100vh repeat(4, 100vh) min-content;
+    grid-template-rows: 100vh repeat(3, 100vh) repeat(2, max-content);
     grid-template-columns: 1fr repeat(6, minmax(min-content, 22rem)) 1fr;
 }

@@ -1,5 +1,63 @@
 .footer {
-    background-color: crimson;
-    grid-column: 2 / 8;
+  background-color: $color-primary-semi-dark;
+  grid-column: 1 / -1;
 
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 5rem 0;
+
+  & > :not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+.social-icon,
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: $color-primary-orange;
+  transition: all 0.2s;
+}
+
+.social__link {
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
+
+  &:hover .social-icon {
+    fill: lighten($color-primary-orange, 20);
+  }
+
+  &:active .social-icon {
+    fill: $color-primary-orange;
+  }
+}
+
+.contact-icons {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  grid-gap: 5rem;
+  align-items: center;
+}
+
+.mobile,
+.email {
+  display: flex;
+  align-items: center;
+}
+
+.address {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  text-align: start;
+}
+
+.detail {
+  margin-left: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
 }
