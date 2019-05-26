@@ -14,5 +14,7 @@
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }

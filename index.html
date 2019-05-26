@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -37,23 +44,25 @@
 
     <div class="main">
         <header class="home">
-            <h1 class="heading-1">
-                <span class="subheading">
-                    Hey there, I'm
-                </span>
-                <span class="heading">
-                    Cedrick Tabares
-                </span>
-            </h1>
-
-            <h1 class="heading-2">
-                <span class="subheading">
-                    I'm from Philippines
-                </span>
-                <span class="heading">
-                    A Full stack web developer
-                </span>
-            </h1>
+            <div class="owl-carousel">
+                <h1 class="heading-1">
+                    <span class="subheading">
+                        Hey there, I'm
+                    </span>
+                    <span class="heading">
+                        Cedrick Tabares
+                    </span>
+                </h1>
+    
+                <h1 class="heading-2">
+                    <span class="subheading">
+                        I'm from Philippines
+                    </span>
+                    <span class="heading">
+                        A Full stack web developer
+                    </span>
+                </h1>
+            </div>
             <div class="scroll">
                 <svg class="scroll__icon">
                     <use xlink:href="/img/sprite.svg#icon-chevron-down"></use>
@@ -252,9 +261,13 @@
             </div>
 
         </footer>
+
     </div>
     
-    
-    
+    <!-- JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/myjs.js"></script>
+
 </body>
 </html>

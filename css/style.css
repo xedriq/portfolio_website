@@ -217,22 +217,15 @@ textarea {
   font-size: 1rem; }
 
 .home {
-  grid-column: 2 / 8;
+  grid-column: 1 / -1;
+  max-width: 90vw;
   color: #eee;
   align-self: center;
   justify-self: center;
   line-height: 5rem;
   text-align: center; }
 
-.heading-1 {
-  background-color: burlywood; }
-
-.heading-2 {
-  background-color: cadetblue;
-  width: 60rem; }
-
 .subheading {
-  display: block;
   font-weight: 300;
   text-transform: uppercase; }
 
