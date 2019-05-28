@@ -1,24 +1,22 @@
 .contact {
-  grid-column: 2 / 8;
-
   display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 50rem));
+  grid-template-columns: repeat(auto-fit, minmax(50rem, max-content));
   position: relative;
   grid-gap: 5rem;
 
   justify-content: center;
   position: relative;
+  margin: 10rem;
+  padding-top: 4rem;
 }
 
 .header {
   position: absolute;
-  top: -7%;
   opacity: 0.1;
   z-index: -10;
+
 }
 
-.form {
-}
 
 .input {
   display: block;
@@ -37,6 +35,7 @@
 
   &:focus {
     box-shadow: 0 0 1rem rgba($color-primary-orange, 0.7);
+    outline: none;
   }
 }
 
@@ -57,14 +56,14 @@ textarea {
 .mapouter {
   position: relative;
   text-align: right;
-  height: 510px;
+  height: 430px;
   width: 100%;
 }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 510px;
-  width: 674px;
+  height: 100%;
+  width: 100%;
   opacity: .8;
 }

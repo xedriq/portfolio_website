@@ -1,26 +1,30 @@
 .about {
-  grid-column: 2 / 8;
+  // grid-column: 1 / -1;
   position: relative;
+  // display: flex;
+  // justify-content: flex-end;
+  // padding: 0 5rem;
+  @include paddingLeftRight;
 
   &__heading {
-    position: relative;
-    top: 29%;
+    position: absolute;
+    top: 30%;
     z-index: -5;
     opacity: 0.1;
   }
 
   &__content {
-    position: relative;
     width: 70%;
-    top: 30%;
-    left: 30%;
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    // @include centerAnchor;
   }
 
   &__cta {
     position: absolute;
-    display: inline;
     left: 50%;
-    top: 70%;
+    top: 80%;
     transform: translate(-50%, -50%);
   }
 

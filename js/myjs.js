@@ -1,12 +1,13 @@
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
-        items: 1,
-        loop: true,
-        margin: 0,
-        stagePadding: 0,
-        autoplay: true,
-        autoplayTimeout: 6000,
-    });
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
+    animateIn: "fadeIn",
+    animateOut: "fadeOut",
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    margin:0,
+    stagePAdding:0,
+    center:true,
   });
+});

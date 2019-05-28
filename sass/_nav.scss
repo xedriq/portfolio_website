@@ -6,6 +6,7 @@
   position: fixed;
   z-index: 100;
   box-shadow: 0 2px 1rem rgba($color-primary-dark, .7);
+  
 
   display: grid;
   grid-template-columns: repeat(2, min-content);
@@ -60,7 +61,7 @@
     grid-template-columns: repeat(5, max-content);
     grid-column-gap: 4rem;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 300;
     position: relative;
   }
@@ -68,6 +69,7 @@
   &__item {
     list-style: none;
     position: relative;
+    text-transform: uppercase;
   }
 
   &__link {
