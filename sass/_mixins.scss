@@ -25,21 +25,21 @@ $breakpoint arguments:
   }
   
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
+    @media (max-width: 80em) {
       @content;
-    } // 1200px
+    } // 1280px = 1280 / 16
   }
 
   @if $breakpoint == tab-port {
     @media (max-width: 58.75em) {
       @content;
-    } // 940px
+    } // 940px = 940 / 16
   }
 
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
-    } // 600px
+    } // 600px: 600px / 16px
   }
   
 }

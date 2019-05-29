@@ -18,8 +18,8 @@
 }
 
 .social-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .contact-icon {
@@ -28,7 +28,6 @@
 }
 
 .social__link {
-
   &:not(:last-child) {
     margin-right: 8rem;
   }
@@ -48,6 +47,13 @@
   justify-content: center;
   grid-gap: 5rem;
   align-items: center;
+
+  @media only screen and (max-width: 45em) {
+    grid-template-columns: max-content;
+    grid-template-rows: min-content;
+    justify-items: center;
+    grid-gap: 3rem;
+  }
 }
 
 .mobile,

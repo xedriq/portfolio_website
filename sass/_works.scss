@@ -10,10 +10,35 @@
   justify-self: center;
   @include paddingLeftRight;
 
+  @include mQ(big-desktop) {
+    grid-template-columns: repeat(3, minmax(43rem, max-content));
+  }
+
+  @include mQ(tab-port) {
+    margin: 10rem 0;
+    grid-template-columns: minmax(min-content, 40rem);
+  }
+
+  @include mQ(phone) {
+    margin: 20rem 0;
+    width: 80%;
+    padding: 0;
+    justify-content: center;
+  }
+
   &__heading {
     grid-column: 1 / -1;
     opacity: 0.1;
-    justify-self: center;
+    text-align: center;
+
+    @include mQ(tab-port) {
+      line-height: 70px;
+    }
+
+    @include mQ(phone) {
+      font-size: 10.3rem;
+      line-height: 65px;
+    }
   }
 
   &__projects {
@@ -23,9 +48,27 @@
     border-radius: 2%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-
     text-align: center;
     background-color: $color-primary-semi-dark;
+
+    @include mQ(big-desktop) {
+      height: 25rem;
+    }
+
+    @include mQ(tab-land) {
+    height: 21rem;
+      
+    }
+    @include mQ(tab-port) {
+    height: 30rem;
+    margin-top: 0;
+      
+    }
+    @include mQ(phone) {
+      // max-width: 90vw;
+      height: 26rem;
+    }
+    
 
     &:hover img {
       transform: scale(1.1, 1.1);

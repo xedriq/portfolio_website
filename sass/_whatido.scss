@@ -2,33 +2,42 @@
   // grid-column: 1 / -1;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, 50rem));
+  grid-template-columns: repeat(3, minmax(min-content, 55rem));
   grid-template-rows: max-content;
   grid-gap: 6rem;
   justify-self: center;
   text-align: center;
   margin: 5rem 0 10rem 0;
   @include paddingLeftRight;
-  
+
+  @include mQ(big-desktop) {
+    grid-template-columns: repeat(3, minmax(45rem, max-content));
+  }
+
+  @include mQ(tab-port) {
+    grid-template-columns: minmax(min-content, 60rem);
+  }
+
   &__heading {
     position: absolute;
     z-index: -2;
     opacity: 0.1;
-    right:5%;
+    right: 5%;
     top: -5%;
-   }
-   
+    @include mQ(tab-port) {
+      line-height: 70px;
+    }
+  }
+
   &__icon {
     height: min-content;
     margin-bottom: 2rem;
     & svg {
       width: 6rem;
-      height: 6rem;;
+      height: 6rem;
       fill: $color-primary-orange;
     }
   }
-
-  
 
   &__content {
     margin-top: 2rem;
@@ -54,7 +63,6 @@
     list-style: none;
   }
 
- 
   &__cta {
     grid-column: 1/-1;
     width: 27rem;

@@ -21,6 +21,22 @@ $color-black: #000;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include mQ(big-desktop) {
+    font-size: 75%;
+  }
+  
+  @include mQ(tab-land) {
+    font-size: 56.25%; // 9 / 16
+  }
+  
+  @include mQ(tab-port) {
+    font-size: 50%; // 8 / 16
+  }
+  
+  // @include mQ(phone) {
+  //   font-size: 43.75%; // 7 / 16
+  // }
  
 }
 
@@ -44,4 +60,12 @@ body {
   grid-template-rows: repeat(2, 100vh) minmax(min-content, max-content) max-content min-content;
   grid-template-columns: 100vw;
   justify-self: center;
+
+  @include mQ(big-desktop) {
+    grid-template-columns: 121em;
+  }
+  @include mQ(phone) {
+    grid-template-columns: 95vw;
+    justify-content: center;
+  }
 }

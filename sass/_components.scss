@@ -39,8 +39,8 @@
     bottom: -0.7rem;
     left: 0rem;
     height: 3px;
-    width: inherit;
-    border-radius: 15%;
+    width: 100%;
+    border-radius: 3px;
     background-color: $color-primary-orange;
     transform: scaleX(0);
     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);

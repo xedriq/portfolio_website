@@ -8,6 +8,20 @@
   position: relative;
   margin: 10rem;
   padding-top: 4rem;
+
+  @include mQ(big-desktop) {
+    grid-template-columns: repeat(2, minmax(50rem, max-content));
+
+  }
+
+  @include mQ(phone) {
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+    justify-items: center;
+  }
+
+ 
 }
 
 .header {
@@ -15,8 +29,26 @@
   opacity: 0.1;
   z-index: -10;
 
+  @include mQ(tab-port) {
+    line-height: 70px;
+    top: -80px;
+  }
+
+  @include mQ(phone) {
+    font-size: 8.8rem;
+    line-height: 52px;
+    text-align: center;
+  }
+  
+
 }
 
+.form {
+  width: 100%;
+  @include mQ(phone) {
+    width: 85%;
+  }
+}
 
 .input {
   display: block;
@@ -37,6 +69,8 @@
     box-shadow: 0 0 1rem rgba($color-primary-orange, 0.7);
     outline: none;
   }
+
+ 
 }
 
 .submit {
@@ -55,9 +89,12 @@ textarea {
 
 .mapouter {
   position: relative;
-  text-align: right;
+  text-align: center;
   height: 430px;
   width: 100%;
+  @include mQ(phone) {
+  width: 375px;
+  }
 }
 
 .gmap_canvas {
@@ -66,4 +103,9 @@ textarea {
   height: 100%;
   width: 100%;
   opacity: .8;
+
+  @include mQ(phone) {
+    text-align: center;
+    width: 100%;
+  }
 }

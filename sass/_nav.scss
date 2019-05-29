@@ -1,17 +1,50 @@
 .navigation {
   background-color: $color-primary-semi-dark;
-  width: 100vw;
+  width: 100%;
   height: 75px;
   padding: 0 7%;
   position: fixed;
   z-index: 100;
-  box-shadow: 0 2px 1rem rgba($color-primary-dark, .7);
-  
-
+  box-shadow: 0 1px 1rem rgba($color-primary-dark, 0.7);
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: space-between;
- 
+
+  @include mQ(big-desktop) {
+  padding: 0 15%;
+    
+  }
+
+  &__button {
+    display: none;
+  }
+
+  @include mQ(tab-port) {
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+
+    &__button {
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-color: $color-primary-semi-dark;
+      // border-radius: 50%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      // box-shadow: 0 1px 10px rgba($color-primary-dark, .8);
+      // border: 1px solid orangered;
+      transition: all 0.3s;
+
+      @include mQ(phone) {
+        width: 65px;
+      height: 65px;
+      }
+    }
+  }
+
   &__logo {
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -22,6 +55,10 @@
     text-transform: uppercase;
     position: relative;
 
+    @include mQ(tab-port) {
+      display: none;
+    }
+
     &:link,
     &:visited {
       text-decoration: none;
@@ -29,6 +66,7 @@
     }
 
     &::after {
+      // Orange underline under brand name
       content: "";
       position: absolute;
       bottom: 1.3rem;
@@ -45,7 +83,7 @@
     &--active::after {
       transform: translateX(-14rem);
     }
-    
+
     &:active::after {
       background-color: lighten($color-primary-orange, 10);
     }
@@ -60,24 +98,128 @@
     display: grid;
     grid-template-columns: repeat(5, max-content);
     grid-column-gap: 4rem;
-    align-items: center;
     font-size: 1.6rem;
     font-weight: 300;
     position: relative;
+    align-items: center;
+    z-index: 200;
+
+    @include mQ(tab-port) {
+      grid-template-columns: max-content;
+      margin-top: 50px;
+      width: 120px;
+      height: 0;
+      position: absolute;
+      text-align: center;
+      transition: all 0.3s;
+      opacity: 0;
+      overflow: hidden;
+      right: 0px;
+    }
+
+    
   }
 
   &__item {
     list-style: none;
     position: relative;
     text-transform: uppercase;
+
+    @include mQ(tab-port) {
+      display: block;
+      font-weight: 400;
+      font-size: 2.5rem;
+
+      &:not(:first-child) {
+        // margin-top: 50px;
+      }
+    }
   }
 
   &__link {
     width: 100%;
-    padding: 0.5rem .3rem;
+    padding: 0.6rem 0.3rem;
 
     &--active::after {
       transform: scaleX(1);
     }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__button {
+    height: 100vh;
+    width: 100vw;
+  }
+  &__checkbox:checked ~ &__items {
+    height: 400px;
+    opacity: 1;
+    right: 42%;
+    @include mQ(phone) {
+      
+    right: 120px;
+      
+
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    margin-top: 3.4rem;
+    z-index: 300;
+    right: 2px;
+    top: 10px;
+    @include centerAnchor;
+    @include mQ(phone) {
+    top: 7px;
+
+    }
+
+
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      height: 2px;
+      background-color: $color-primary-light;
+      display: inline-block;
+
+      @include mQ(phone) {
+        width: 3.5rem;
+
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -1.4rem;
+    }
+
+    &::after {
+      top: 1.4rem;
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
