@@ -33,31 +33,31 @@
             <span class="navigation__icon">&nbsp;</span>
         </label>
 
-        <a class="navigation__logo" href="#">
+        <a class="navigation__logo scroll" href="#home">
             <img class="navigation__photo" src="img/CEDRICK-TABARES.svg" alt="photo">
             <div class="navigation__logo-name">Cedrick Tabares</div>
         </a>
         <ul class="navigation__items">
             <li class="navigation__item">
-                <a class="btn-text navigation__link navigation__link--active" href="#">home</a>
+                <a class="btn-text navigation__link scroll" href="#home">home</a>
             </li>
             <li class="navigation__item">
-                <a class="btn-text navigation__link" href="#">about</a>
+                <a class="btn-text navigation__link scroll" href="#about">about</a>
             </li>
             <li class="navigation__item">
-                <a class="btn-text navigation__link" href="#">what i do</a>
+                <a class="btn-text navigation__link scroll" href="#whatido">what i do</a>
             </li>
             <li class="navigation__item">
-                <a class="btn-text navigation__link" href="#">works</a>
+                <a class="btn-text navigation__link scroll" href="#works">works</a>
             </li>
             <li class="navigation__item">
-                <a class="btn-text navigation__link" href="#">contact</a>
+                <a class="btn-text navigation__link scroll" href="#contact">contact</a>
             </li>
         </ul>
     </nav>
     
     <div class="main">
-        <header class="home">
+        <header class="home" id="home">
             <div class="owl-carousel">
                 <div class="heading-1">
                     <h1>
@@ -73,22 +73,20 @@
                     </h1>
                 </div>
             </div>
-            <div class="scroll">
-                <svg class="scroll__icon">
+            <div class="scroll-down">
+                <svg class="scroll-down__icon">
                     <use xlink:href="/img/sprite.svg#icon-chevron-down"></use>
                 </svg>
             </div>
         </header>
 
-        <section class="about">
+        <section class="about" id="about">
             <h2 class="about__heading">About me</h2>
             <p class="about__content">
-                I am a passionate web developer living in Quezon City, Philippines. With my Bachelor of Science in
-                Computer
-                Science and my recent training in full-stack web development, together with the creative, organizational
+                I'm a passionate web developer living in Quezon City, Philippines. With my Bachelor of Science in
+                Computer Science and my recent training in full-stack web development, together with the creative, organizational
                 and technical skills that I acquired as Videographer / Video Editor for more than 10 years &mdash;from
-                here and
-                abroad, I aim to develop functional, dynamic and effective web applications that delivers clear message
+                here and abroad, I aim to develop functional, dynamic and effective web applications that delivers clear message
                 to the user while contributing to the interest of the website owner. May it be collaborating with a
                 team or with minimal supervision.
             </p>
@@ -97,7 +95,7 @@
             </div>
         </section>
 
-        <section class="whatido">
+        <section class="whatido" id="whatido">
             <h2 class="whatido__heading">What I do</h2>
             
             <div class="whatido__section">
@@ -119,10 +117,11 @@
 
                 <ul class="whatido__items">
                     <li class="whatido__item">HTML5</li>
-                    <li class="whatido__item">CSS / SASS</li>
-                    <li class="whatido__item">JQuery</li>
+                    <li class="whatido__item">CSS/SASS</li>
+                    <li class="whatido__item">JavaScript/JQuery</li>
                     <li class="whatido__item">Bootstrap</li>
                     <li class="whatido__item">SemanticUI</li>
+                    <li class="whatido__item">Adobe XD/Adobe Photoshop</li>
                     <li class="whatido__item">NPM</li>
                     <li class="whatido__item">Git</li>
                 </ul>
@@ -149,6 +148,7 @@
                     </p>
                 
                 <ul class="whatido__items">
+                    <li class="whatido__item">Django</li>
                     <li class="whatido__item">Numpy</li>
                     <li class="whatido__item">Pandas</li>
                     <li class="whatido__item">Pip</li>
@@ -175,7 +175,7 @@
                 
                 <ul class="whatido__items">
                     <li class="whatido__item">Django</li>
-                    <li class="whatido__item">Flask</li>
+                    <li class="whatido__item">Django REST Framework</li>
                     <li class="whatido__item">MySQL</li>
                     <li class="whatido__item">PostgreSQL</li>
                     <li class="whatido__item">MongoDB</li>
@@ -191,7 +191,7 @@
 
         </section>
 
-        <section class="works">
+        <section class="works" id="works">
             <h2 class="works__heading">Recent works</h2>
             <div class="works__projects">
                 <figure>
@@ -229,7 +229,7 @@
 
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="header">Contact me</h2>
             <form action="" class="form">
                 <input class="input" type="text" name="name" placeholder="Your Name" required>
@@ -241,14 +241,14 @@
 
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="500" height="430" id="gmap_canvas" src="https://maps.google.com/maps?q=block%201%20lot%2033%20lou%20sheff%20st%20pamahay%20homes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
+                    <iframe width="500" height="430" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.6304617925322!2d121.05457462923317!3d14.739604399357138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b041f57c0b1b%3A0x721ea885a578bb93!2sLou+Sheff%2C+Novaliches%2C+Quezon+City%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1559561326553!5m2!1sen!2sph" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
             
         </section>
     </div>
     
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="social-links">
             <a href="https://www.facebook.com/xedriq" target="_blank" class="social__link">
                 <svg class="social-icon">

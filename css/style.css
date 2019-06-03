@@ -318,12 +318,12 @@ textarea {
   letter-spacing: 1.5rem;
   font-size: 3rem; }
 
-.scroll {
+.scroll-down {
   position: absolute;
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  .scroll__icon {
+  .scroll-down__icon {
     width: 6rem;
     fill: #d65a31;
     animation: upDown 3s ease-in-out infinite;
